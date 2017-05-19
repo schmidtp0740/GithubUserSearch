@@ -13,13 +13,6 @@ class Card extends Component {
     }
 }
 
-let data = [
-    { login: 'schmidtp0740',
-        id: 11967281,
-        avatar_url: 'https://avatars1.githubusercontent.com/u/11967281?v=3',
-        company: 'null'}
-];
-
 class CardList extends Component {
     render() {
         return (
@@ -38,6 +31,7 @@ class Form extends Component {
         axios.get(`https://api.github.com/users/${this.state.userName}`)
             .then( resp =>{
                 this.props.onSubmit(resp.data);
+                this.setState({ userName: ''});
             })
     }
     render() {
