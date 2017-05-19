@@ -4,6 +4,7 @@
   "description": "web app to search github users",
   "main": "webpack.config.js",
   "dependencies": {
+    "axios": "^0.16.1",
     "react": "^0.14.9",
     "react-dom": "^0.14.6"
   },
